@@ -1,256 +1,266 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Maria Júlia ❤️</title>
-
-<style>
-
-*{
+<!DOCTYPE html>  <html lang="pt-BR">    <head>  <meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Maria Júlia ❤️</title>  <style>    *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-background: linear-gradient(135deg, #ff9ecb, #ffe4ec, #fff8fc);
-background-attachment: fixed;
-font-family:Arial,sans-serif;
-text-align:center;
+
+background:linear-gradient(135deg,#ffb6d9,#ffdbea,#fff5fa);
 overflow-x:hidden;
-color:#c2185b;
+color:#fff;
+text-align:center;
+animation:aparecer 1.5s;
+
+}
+
+@keyframes aparecer{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
 }
 
 header{
-padding:40px 20px;
+
+padding:50px 20px;
+
 }
 
 h1{
-font-size:42px;
+
+font-size:48px;
+text-shadow:0 0 15px #ff4fa0;
+
 }
 
 h2{
+
 margin-top:15px;
 font-size:25px;
+
 }
 
 #contador{
-margin:25px auto;
-background:white;
+
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(12px);
 padding:20px;
 width:90%;
-max-width:380px;
-border-radius:20px;
-font-size:22px;
-box-shadow:0 0 20px rgba(0,0,0,.15);
+max-width:360px;
+margin:25px auto;
+border-radius:25px;
+font-size:23px;
+box-shadow:0 15px 40px rgba(255,105,180,.35);
+
 }
 
 .carta{
-background:white;
+
 width:90%;
-max-width:500px;
-margin:40px auto;
+max-width:550px;
+margin:35px auto;
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(15px);
 padding:25px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(255,105,180,0.25);
-line-height:1.8;
-font-size:19px;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+line-height:1.9;
+
+}
+
+.carta h2{
+
+margin-bottom:15px;
+
 }
 
 .galeria{
+
 display:flex;
 flex-direction:column;
 align-items:center;
 gap:35px;
-margin-bottom:50px;
+margin:40px;
+
 }
 
 .polaroid{
+
 background:white;
 padding:15px;
-border-radius:20px;
-width:300px;
-box-shadow:0 15px 35px rgba(255,105,180,0.30);
-transition:0.3s;
+width:320px;
+border-radius:22px;
+box-shadow:0 20px 45px rgba(255,105,180,.35);
+transition:.4s;
+
+}
+
+.polaroid:hover{
+
+transform:scale(1.05) rotate(-2deg);
+
 }
 
 .polaroid img{
+
 width:100%;
-border-radius:15px;
+border-radius:18px;
+
 }
 
 .legenda{
-margin-top:12px;
-font-size:20px;
-font-family:cursive;
+
 color:#444;
-}
-
-.heart{
-position:fixed;
-top:-20px;
-animation:cair 7s linear infinite;
-pointer-events:none;
-}
-
-@keyframes cair{
-
-0%{
-transform:translateY(-30px);
-opacity:1;
-}
-
-100%{
-transform:translateY(110vh);
-opacity:0;
-}
+font-size:22px;
+margin-top:12px;
+font-family:cursive;
 
 }
 
 button{
 
 margin:40px;
-padding:15px 30px;
-font-size:22px;
+padding:15px 35px;
+font-size:20px;
 border:none;
-border-radius:30px;
-background:#ff4d88;
+border-radius:40px;
+background:#ff4d94;
 color:white;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 10px 25px rgba(255,105,180,.4);
 
-}
-.polaroid:hover{
-    transform: scale(1.05) rotate(-2deg);
-    box-shadow: 0 20px 40px rgba(255,105,180,0.45);
 }
 
 button:hover{
-    transform: scale(1.08);
-    background: #ff2f75;
-    transition: 0.3s;
+
+transform:scale(1.08);
+background:#ff2f75;
+
 }
 
-h1{
-    text-shadow: 0 0 15px rgba(255,105,180,0.5);
-}
-</style>
+footer{
 
-</head>
+margin:50px;
+font-size:18px;
 
-<body>
-
-<header>
-
-<h1>Maria Júlia ❤️</h1>
-
-<h2>Estamos juntos há...</h2>
-
-<div id="contador"></div>
-
-</header>
-
-<div class="carta">
-
-<h2>💌 Para você</h2>
-
-<p>
-
-Desde que você entrou na minha vida, meus dias ficaram mais felizes.
-
-Mesmo que nosso namoro tenha começado há pouco tempo, você já se tornou uma pessoa muito especial para mim.
-
-Espero viver muitos momentos ao seu lado, criar lembranças lindas e fazer você sorrir todos os dias.
-
-Eu te amo. ❤️
-
-</p>
-
-</div>
-
-<h2>Nossas Recordações 📸</h2>
-
-<div class="galeria">
-
-<div class="polaroid">
-<img src="file_00000000f584720eb606093041861c16.png">
-<div class="legenda">Nosso começo ❤️</div>
-</div>
-
-<div class="polaroid">
-<img src="Screenshot_20260713-160807~2.png">
-<div class="legenda">Você é perfeita 💕</div>
-</div>
-
-<div class="polaroid">
-<img src="Screenshot_20260715-174604.png">
-<div class="legenda">Meu amor ❤️</div>
-</div>
-
-<div class="polaroid">
-<img src="IMG-20260720-WA0024.jpg">
-<div class="legenda">Nosso momento ❤️</div>
-</div>
-
-<div class="polaroid">
-<img src="IMG-20260720-WA0026.jpg">
-<div class="legenda">Sempre nós 💖</div>
-</div>
-
-<div class="polaroid">
-<img src="IMG-20260720-WA0031.jpg">
-<div class="legenda">Para sempre ❤️</div>
-</div>
-
-</div>
-
-<button onclick="alert('Eu te amo muito ❤️')">
-❤️ Eu Te Amo ❤️
-</button>
-
-<script><script>
-const inicio = new Date("2026-07-10");
-
-function atualizar() {
-    const hoje = new Date();
-
-    let anos = hoje.getFullYear() - inicio.getFullYear();
-    let meses = hoje.getMonth() - inicio.getMonth();
-    let dias = hoje.getDate() - inicio.getDate();
-
-    if (dias < 0) {
-        meses--;
-        const ultimoMes = new Date(hoje.getFullYear(), hoje.getMonth(), 0);
-        dias += ultimoMes.getDate();
-    }
-
-    if (meses < 0) {
-        anos--;
-        meses += 12;
-    }
-
-    document.getElementById("contador").innerHTML =
-        anos + " anos, " + meses + " meses e " + dias + " dias ❤️";
 }
 
-setInterval(atualizar, 1000);
-atualizar();
+.heart{
 
-setInterval(() => {
-    const h = document.createElement("div");
-    h.className = "heart";
-    h.innerHTML = "❤️";
-    h.style.left = Math.random() * 100 + "vw";
-    h.style.fontSize = (20 + Math.random() * 30) + "px";
+position:fixed;
+top:-30px;
+color:#ff2f75;
+animation:cair 6s linear infinite;
+pointer-events:none;
 
-    document.body.appendChild(h);
+}
 
-    setTimeout(() => {
-        h.remove();
-    }, 6000);
-}, 300);
-</script>
+@keyframes cair{
 
-</body>
-</html>
+0%{
 
+transform:translateY(-10vh) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(360deg);
+
+}
+
+}
+
+</style>  </head>  <body>  <header>  <h1>Maria Júlia ❤️</h1>  <h2>Nosso cantinho especial 💕</h2>  <div id="contador"></div>  </header>  <div class="carta">  <h2>💌 Para você</h2>  <p>  Desde que você entrou na minha vida, tudo ficou mais bonito.
+
+Mesmo com pouco tempo juntos, você já conseguiu ocupar um lugar enorme no meu coração.
+
+Cada conversa, cada sorriso e cada momento ao seu lado são especiais para mim.
+
+Esses 10 dias são apenas o começo da nossa história.
+
+Eu te amo muito, Maria Júlia. ❤️
+
+</p>  </div>  <div class="galeria">  <div class="polaroid">    
+<img src="file_00000000f584720eb606093041861c16.png">    
+<div class="legenda">Nosso começo ❤️</div>    
+</div>  <div class="polaroid">    
+<img src="Screenshot_20260713-160807~2.png">    
+<div class="legenda">Você é linda 💖</div>    
+</div>  <div class="polaroid">    
+<img src="Screenshot_20260715-174604.png">    
+<div class="legenda">Eu te amo ❤️</div>    
+</div>  </div>  <button onclick="alert('Você é a melhor coisa que aconteceu na minha vida! ❤️')">  Eu Te Amo ❤️  
+</button>   
+<footer>  Feito com ❤️ por Isaque, para Maria Júlia.
+
+</footer>  <script>  
+  
+const inicio = new Date("2026-07-10");  
+  
+function atualizar(){  
+  
+const hoje = new Date();  
+  
+let anos = hoje.getFullYear()-inicio.getFullYear();  
+let meses = hoje.getMonth()-inicio.getMonth();  
+let dias = hoje.getDate()-inicio.getDate();  
+  
+if(dias<0){  
+meses--;  
+const ultimoMes=new Date(hoje.getFullYear(),hoje.getMonth(),0);  
+dias+=ultimoMes.getDate();  
+}  
+  
+if(meses<0){  
+anos--;  
+meses+=12;  
+}  
+  
+document.getElementById("contador").innerHTML=  
+`${anos} anos, ${meses} meses e ${dias} dias ❤️`;  
+  
+}  
+  
+setInterval(atualizar,1000);  
+atualizar();  
+  
+setInterval(()=>{  
+  
+const h=document.createElement("div");  
+  
+h.className="heart";  
+  
+h.innerHTML="❤️";  
+  
+h.style.left=Math.random()*100+"vw";  
+  
+h.style.fontSize=(20+Math.random()*25)+"px";  
+  
+document.body.appendChild(h);  
+  
+setTimeout(()=>{  
+  
+h.remove();  
+  
+},6000);  
+  
+},300);  
+  
+</script>  </body>  
+</html>  Assim chat?e
