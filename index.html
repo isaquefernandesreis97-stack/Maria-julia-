@@ -103,46 +103,46 @@ animation:cair 6s linear infinite;
 <div class="legenda">Eu te amo ❤️</div>
 </div>
 
-<script>
+  <script>const inicio = new Date("2026-05-18");
 
-const inicio = new Date("2026-05-18");
+function atualizar() {
+    let hoje = new Date();
 
-function atualizar(){
+    let anos = hoje.getFullYear() - inicio.getFullYear();
+    let meses = hoje.getMonth() - inicio.getMonth();
+    let dias = hoje.getDate() - inicio.getDate();
 
-let hoje=new Date();
+    if (dias < 0) {
+        meses--;
+        const ultimoMes = new Date(hoje.getFullYear(), hoje.getMonth(), 0);
+        dias += ultimoMes.getDate();
+    }
 
-let dias=Math.floor((hoje-inicio)/1000/60/60/24);
+    if (meses < 0) {
+        anos--;
+        meses += 12;
+    }
 
-document.getElementById("contador").innerHTML=dias+" dias juntos ❤️";
-
+    document.getElementById("contador").innerHTML =
+        anos + " anos, " + meses + " meses e " + dias + " dias ❤️";
 }
 
-setInterval(atualizar,1000);
-
+setInterval(atualizar, 1000);
 atualizar();
 
-setInterval(()=>{
+setInterval(() => {
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "❤️";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (20 + Math.random() * 30) + "px";
+    document.body.appendChild(h);
 
-let h=document.createElement("div");
-
-h.className="heart";
-
-h.innerHTML="❤️";
-
-h.style.left=Math.random()*100+"vw";
-
-h.style.fontSize=(20+Math.random()*30)+"px";
-
-document.body.appendChild(h);
-
-setTimeout(()=>{
-h.remove();
-},6000);
-
-},300);
-
-</script>
-
+    setTimeout(() => {
+        h.remove();
+    }, 6000);
+}, 300);
+    
 </body>
 
 </html>
