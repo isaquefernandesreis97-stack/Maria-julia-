@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,69 +8,115 @@
 
 <style>
 
-body{
+*{
 margin:0;
-background:#ffd6e7;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(180deg,#ffd6e7,#fff0f6);
+font-family:Arial,sans-serif;
 text-align:center;
 overflow-x:hidden;
+color:#c2185b;
+}
+
+header{
+padding:40px 20px;
 }
 
 h1{
-font-size:40px;
-margin-top:30px;
-color:#c2185b;
+font-size:42px;
 }
 
 h2{
-color:#c2185b;
-}
-
-p{
-font-size:20px;
-}
-
-.tempo{
+margin-top:15px;
 font-size:25px;
+}
+
+#contador{
+margin:25px auto;
 background:white;
-display:inline-block;
-padding:15px;
+padding:20px;
+width:90%;
+max-width:380px;
 border-radius:20px;
-margin:20px;
-box-shadow:0 0 10px #999;
+font-size:22px;
+box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+.carta{
+background:white;
+width:90%;
+max-width:500px;
+margin:40px auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+line-height:1.8;
+font-size:19px;
+}
+
+.galeria{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:35px;
+margin-bottom:50px;
 }
 
 .polaroid{
 background:white;
-width:280px;
 padding:15px;
-margin:40px auto;
-border-radius:10px;
-box-shadow:0 0 15px rgba(0,0,0,.3);
+border-radius:15px;
+width:300px;
+box-shadow:0 0 15px rgba(0,0,0,.25);
 }
 
 .polaroid img{
 width:100%;
-border-radius:5px;
+border-radius:10px;
 }
 
 .legenda{
-font-size:25px;
+margin-top:12px;
+font-size:20px;
 font-family:cursive;
-margin-top:10px;
 color:#444;
 }
 
 .heart{
 position:fixed;
 top:-20px;
-color:red;
-animation:cair 6s linear infinite;
+animation:cair 7s linear infinite;
+pointer-events:none;
 }
 
 @keyframes cair{
-0%{transform:translateY(-10px);}
-100%{transform:translateY(110vh);}
+
+0%{
+transform:translateY(-30px);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+
+}
+
+button{
+
+margin:40px;
+padding:15px 30px;
+font-size:22px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+
 }
 
 </style>
@@ -80,13 +125,37 @@ animation:cair 6s linear infinite;
 
 <body>
 
+<header>
+
 <h1>Maria Júlia ❤️</h1>
 
-<h2>Estamos juntos há</h2>
+<h2>Estamos juntos há...</h2>
 
-<div class="tempo" id="contador"></div>
+<div id="contador"></div>
 
-<h2>Nossas Recordações 💕</h2>
+</header>
+
+<div class="carta">
+
+<h2>💌 Para você</h2>
+
+<p>
+
+Desde que você entrou na minha vida, meus dias ficaram mais felizes.
+
+Mesmo que nosso namoro tenha começado há pouco tempo, você já se tornou uma pessoa muito especial para mim.
+
+Espero viver muitos momentos ao seu lado, criar lembranças lindas e fazer você sorrir todos os dias.
+
+Eu te amo. ❤️
+
+</p>
+
+</div>
+
+<h2>Nossas Recordações 📸</h2>
+
+<div class="galeria">
 
 <div class="polaroid">
 <img src="file_00000000f584720eb606093041861c16.png">
@@ -95,19 +164,40 @@ animation:cair 6s linear infinite;
 
 <div class="polaroid">
 <img src="Screenshot_20260713-160807~2.png">
-<div class="legenda">Você é linda 💕</div>
+<div class="legenda">Você é perfeita 💕</div>
 </div>
 
 <div class="polaroid">
 <img src="Screenshot_20260715-174604.png">
-<div class="legenda">Eu te amo ❤️</div>
+<div class="legenda">Meu amor ❤️</div>
 </div>
-  
-</script>
-  const inicio = new Date("2026-05-18");
+
+<div class="polaroid">
+<img src="IMG-20260720-WA0024.jpg">
+<div class="legenda">Nosso momento ❤️</div>
+</div>
+
+<div class="polaroid">
+<img src="IMG-20260720-WA0026.jpg">
+<div class="legenda">Sempre nós 💖</div>
+</div>
+
+<div class="polaroid">
+<img src="IMG-20260720-WA0031.jpg">
+<div class="legenda">Para sempre ❤️</div>
+</div>
+
+</div>
+
+<button onclick="alert('Eu te amo muito ❤️')">
+❤️ Eu Te Amo ❤️
+</button>
+
+<script><script>
+const inicio = new Date("2026-07-10");
 
 function atualizar() {
-    let hoje = new Date();
+    const hoje = new Date();
 
     let anos = hoje.getFullYear() - inicio.getFullYear();
     let meses = hoje.getMonth() - inicio.getMonth();
@@ -132,18 +222,19 @@ setInterval(atualizar, 1000);
 atualizar();
 
 setInterval(() => {
-    let h = document.createElement("div");
+    const h = document.createElement("div");
     h.className = "heart";
     h.innerHTML = "❤️";
     h.style.left = Math.random() * 100 + "vw";
     h.style.fontSize = (20 + Math.random() * 30) + "px";
+
     document.body.appendChild(h);
 
     setTimeout(() => {
         h.remove();
     }, 6000);
 }, 300);
- </script>   
-</body>
+</script>
 
+</body>
 </html>
