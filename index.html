@@ -1,44 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Maria Júlia ❤️</title>
 
 <style>
+
 body{
 margin:0;
-background:#000;
-color:white;
+background:#ffd6e7;
 font-family:Arial;
 text-align:center;
-overflow:hidden;
+overflow-x:hidden;
 }
 
 h1{
-margin-top:40px;
 font-size:40px;
+margin-top:30px;
+color:#c2185b;
 }
 
-button{
-padding:15px 35px;
-font-size:22px;
-border:none;
-border-radius:15px;
-background:#ff3b6f;
-color:white;
-cursor:pointer;
+h2{
+color:#c2185b;
 }
 
-#mensagem{
-display:none;
-margin:20px;
-font-size:24px;
+p{
+font-size:20px;
 }
 
-img{
-width:250px;
+.tempo{
+font-size:25px;
+background:white;
+display:inline-block;
+padding:15px;
 border-radius:20px;
-margin:10px;
+margin:20px;
+box-shadow:0 0 10px #999;
+}
+
+.polaroid{
+background:white;
+width:280px;
+padding:15px;
+margin:40px auto;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,.3);
+}
+
+.polaroid img{
+width:100%;
+border-radius:5px;
+}
+
+.legenda{
+font-size:25px;
+font-family:cursive;
+margin-top:10px;
+color:#444;
 }
 
 .heart{
@@ -52,37 +73,66 @@ animation:cair 6s linear infinite;
 0%{transform:translateY(-10px);}
 100%{transform:translateY(110vh);}
 }
+
 </style>
+
 </head>
 
 <body>
 
 <h1>Maria Júlia ❤️</h1>
 
-<button onclick="abrir()">Clique aqui ❤️</button>
+<h2>Estamos juntos há</h2>
 
-<div id="mensagem">
-<h2>Eu te amo muito ❤️</h2>
-<p>Você é a melhor parte dos meus dias.</p>
+<div class="tempo" id="contador"></div>
 
+<h2>Nossas Recordações 💕</h2>
+
+<div class="polaroid">
 <img src="file_00000000f584720eb606093041861c16.png">
+<div class="legenda">Nosso começo ❤️</div>
+</div>
+
+<div class="polaroid">
 <img src="Screenshot_20260713-160807~2.png">
+<div class="legenda">Você é linda 💕</div>
+</div>
+
+<div class="polaroid">
 <img src="Screenshot_20260715-174604.png">
-  
-
-
+<div class="legenda">Eu te amo ❤️</div>
+</div>
 
 <script>
-function abrir(){
-document.getElementById("mensagem").style.display="block";
+
+const inicio = new Date("2026-05-18");
+
+function atualizar(){
+
+let hoje=new Date();
+
+let dias=Math.floor((hoje-inicio)/1000/60/60/24);
+
+document.getElementById("contador").innerHTML=dias+" dias juntos ❤️";
+
 }
 
+setInterval(atualizar,1000);
+
+atualizar();
+
 setInterval(()=>{
+
 let h=document.createElement("div");
+
 h.className="heart";
+
 h.innerHTML="❤️";
+
 h.style.left=Math.random()*100+"vw";
+
 h.style.fontSize=(20+Math.random()*30)+"px";
+
 document.body.appendChild(h);
 
 setTimeout(()=>{
@@ -90,7 +140,9 @@ h.remove();
 },6000);
 
 },300);
+
 </script>
 
 </body>
+
 </html>
